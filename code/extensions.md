@@ -1,0 +1,23 @@
+- auto close tag
+- auto rename tag
+- biome/oxlint
+- bun
+- catppuccin
+- charmed icons
+- date & time
+- error lens
+- even better toml
+- file tree pro
+- github pull requests
+- gitlens
+- highlight matching tag
+- houston
+- import cost
+- monochromator (favorite)
+- power mode
+- prettify typescript types
+- pretty typescript errors
+- remote -ssh
+- symbols
+- todo tree
+- vscode-pets

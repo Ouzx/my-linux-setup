@@ -1,0 +1,12 @@
+My app list:
+- AppImage Launcher
+- Btop
+- Bottles, Wine, Lutris, Heroic (allow GPU acceleration in Flatseal), Steam, MangoHud
+- Cursor, Warp Terminal (zsh + oh-my-zsh), VS Code, Zed, DBeaver, pgAdmin, VS Code
+- Discord, Zen Browser, Google Chrome
+- Flatpak (no need to have Flatseal; KDE supports it by default). For Zen Browser, before modifying the profile, allow filesystem access for proper drag & drop.
+- Hyperion: monitor backlight/ambient driver
+- KDE Connect
+- Proton VPN
+- Remmina
+- Wallpaper Engine (Steam)
