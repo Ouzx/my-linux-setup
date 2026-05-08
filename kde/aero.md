@@ -1,0 +1,1 @@
+https://github.com/aeroshell-desktop/aerothemeplasma/blob/Plasma/6.6/INSTALL.md
