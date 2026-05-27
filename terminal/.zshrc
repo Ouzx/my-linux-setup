@@ -28,5 +28,8 @@ alias rsp='systemd-run --user plasmashell --replace'
 # chrome flatpak
 alias google-chrome="flatpak run com.google.Chrome"
 
-# Fix Wallpaper Engine crash (adjust path to where you keep fix-wallpaper.sh)
-alias fix-wp='~/Projects/my-linux-setup/kde/fix-wallpaper.sh'
+# updates all packages
+alias upup='sudo dnf upgrade -y && flatpak update -y && cvm --update'
+
+# Obsidian Sync
+alias gsync="(cd ~/Oz/ozxk-vault/ && git add . && git commit -m 'update' && git push)"

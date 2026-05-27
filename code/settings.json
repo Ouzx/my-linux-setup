@@ -1,24 +1,23 @@
 {
     // Editor
-    "workbench.editor.showTabs": "single",
+    "workbench.editor.showTabs": "multiple",
     "workbench.tree.indent": 16,
     "editor.minimap.enabled": true,
     "editor.smoothScrolling": true,
 
-
     // Explorer
     "explorer.compactFolders": false,
-    "explorer.confirmDragAndDrop": true,
+    "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
 
     // Editor Fonts
-    "editor.fontFamily": "JetBrains Mono, Fira Code",
+    "editor.fontFamily": "JetBrains Mono, Monocraft, Fira Code",
     "editor.fontLigatures": true,
-    "editor.fontSize": 14,
+    "editor.fontSize": 16,
     "editor.lineHeight": 2,
 
     // Terminal Fonts
-    "terminal.integrated.fontFamily": "JetBrains Mono, Fira Code",
+    "terminal.integrated.fontFamily": "JetBrains Mono, Monocraft, Fira Code",
     "terminal.integrated.lineHeight": 1.2,
     "terminal.integrated.fontSize": 14,
 
@@ -29,23 +28,21 @@
     "editor.scrollbar.horizontal": "hidden",
 
     // Theme
-    "workbench.colorTheme": "Monochromator Dark Ruby",
-    "workbench.iconTheme": "charmed-soft",
+    "workbench.colorTheme": "Catppuccin Frappé",
+    "workbench.iconTheme": "flow-deep",
 
     // Extensions
-    "dateTime.customFormat": "dddd, DD/MM/YYYY - HH:MM",
+    "dateTime.customFormat": "· dddd, DD/MM/YYYY · HH:mm",
     "dateTime.statusBarAlignment": "right",
     "biome.suggestInstallingGlobally": false,
     "vscode-pets.theme": "winter",
     "vscode-pets.throwBallWithMouse": true,
 
     // Window
-    "window.zoomLevel": 1,
-    "window.titleBarStyle": "native",
-    "workbench.layoutControl.enabled": false,
+    "window.zoomLevel": 0,
+    "window.titleBarStyle": "custom",
     "cursor.composer.shouldChimeAfterChatFinishes": true,
     "cursor.composer.usageSummaryDisplay": "always",
-    "workbench.navigationControl.enabled": false,
     "window.customTitleBarVisibility": "never",
 
     // git
@@ -55,9 +52,22 @@
     // Utils
     "symbols.hidesExplorerArrows": false,
     "window.commandCenter": true,
-    "window.menuBarVisibility": "toggle",
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.mouseWheelScrollSensitivity": 2,
-    "typescript.updateImportsOnFileMove.enabled": "always"
-}
-
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "files.exclude": {
+      "**/node_modules": true
+    },
+    "githubPullRequests.fileListLayout": "tree",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "cursor.cpp.disabledLanguages": [
+      "plaintext",
+      "untitled"
+    ],
+    "git.enableSmartCommit": true,
+    "window.menuBarVisibility": "compact",
+    "workbench.navigationControl.enabled": false,
+    "workbench.layoutControl.enabled": false,
+    "cursor.general.glassShowWarningNotifications": true,
+    "window.autoDetectColorScheme": false
+  }

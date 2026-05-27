@@ -6,3 +6,11 @@ Follow the docs. In Wallpapers → About → Lib Checking, ensure all items are 
 
 There is another plugin called Smart Video Wallpaper reborn. Its also good, at least not flakky.
 https://github.com/luisbocanegra/plasma-smart-video-wallpaper-reborn
+
+---
+
+Update: I found the best wallpaper plugin:
+
+https://github.com/waywallen/waywallen
+
+It supports both wallpaper engine and video typed wallpapers, and its quite stable.
