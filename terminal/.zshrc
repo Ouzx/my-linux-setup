@@ -33,3 +33,26 @@ alias upup='sudo dnf upgrade -y && flatpak update -y && cvm --update'
 
 # Obsidian Sync
 alias gsync="(cd ~/Oz/ozxk-vault/ && git add . && git commit -m 'update' && git push)"
+
+# Fedora usb file transfer fix; reduce mem cache size, then reset it when you done.
+# Toggle USB-friendly low write-cache mode
+usbcache-low() {
+    echo "--- Restricting system write cache for slow USB drives ---"
+    sudo sysctl -w vm.dirty_bytes=15728640
+    sudo sysctl -w vm.dirty_background_bytes=15728640
+    echo "Done. Progress bars will now reflect physical device speeds."
+}
+
+# Revert to Fedora's high-performance defaults
+usbcache-default() {
+    echo "--- Restricting cache by bytes deactivated ---"
+    sudo sysctl -w vm.dirty_bytes=0
+    sudo sysctl -w vm.dirty_background_bytes=0
+    echo "--- Re-enabling Fedora default percentages ---"
+    sudo sysctl -w vm.dirty_ratio=40
+    sudo sysctl -w vm.dirty_background_ratio=10
+    echo "Done. High-performance RAM buffering restored."
+}
+
+alias usb-use="usbcache-low"
+alias usb-unuse="usbcache-default"
