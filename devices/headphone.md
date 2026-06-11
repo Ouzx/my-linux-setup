@@ -1,0 +1,5 @@
+Here is a quick summary of how I fixed my **soundcore Space One** audio quality on Fedora:
+
+* **Switched to SBC-XQ:** We moved away from standard AAC/SBC and selected the **High Fidelity Playback (A2DP Sink, codec SBC-XQ)** profile in your KDE system settings. This instantly boosted your Bluetooth audio transmission bitrate up to **512 kbps - 612 kbps** using a cleaner, dual-channel pipeline.
+* **Upgraded Resampling Quality:** We copied the default `pipewire-pulse.conf` file to your user directory (`~/.config/pipewire/`) and unlocked studio-grade audio processing by turning the resampling algorithm up from its default conservative setting to maximum quality (`resample.quality = 10`).
+* **Optimized System Clock Rates:** We edited your `pipewire.conf` file to establish a clean base rate (`default.clock.rate = 48000`) while giving the system the flexibility to scale up seamlessly for native high-resolution audio files by adding a dynamic range of `[ 44100 48000 88200 96000 ]` to your allowed clock rates.
