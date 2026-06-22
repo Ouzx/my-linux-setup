@@ -4,15 +4,15 @@
 [Unit]
 Description=Logitech Configuration Daemon
 StartLimitIntervalSec=0
-After=multi-user.target
-Wants=multi-user.target
+After=graphical.target
+Wants=graphical.target
 
 [Service]
 Type=simple
 ExecStart=/usr/local/bin/logid
 User=root
-Restart=on-failure
-RestartSec=3
+Restart=always
+RestartSec=3s
 ExecStartPre=/bin/sleep 2
 
 [Install]
