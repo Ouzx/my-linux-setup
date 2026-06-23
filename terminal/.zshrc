@@ -54,5 +54,20 @@ usbcache-default() {
     echo "Done. High-performance RAM buffering restored."
 }
 
+# USB sync alias
 alias usb-use="usbcache-low"
 alias usb-unuse="usbcache-default"
+
+# Clean up local branches that are merged upstream
+git-clean-branches() {
+    # Dynamically detect default branch (main/master)
+    local main_branch=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@')
+    main_branch=${main_branch:-main}
+
+    echo "Switching to $main_branch and pruning remote references..."
+    git checkout "$main_branch" && git fetch -p && \
+    git branch --merged | grep -v '^\*' | grep -vE "^($main_branch|master|develop|dev|main|stage|staging)$" | xargs -r git branch -d
+}
+
+# Alias for quick access
+alias gcb="git-clean-branches"
