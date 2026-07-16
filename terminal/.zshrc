@@ -25,6 +25,9 @@ alias cursor='gtk-launch cursor'
 # restart plasma completely
 alias rsp='systemd-run --user plasmashell --replace'
 
+# restart audio services
+alias rsa='systemctl --user restart pipewire pipewire-pulse wireplumber'
+
 # chrome flatpak
 alias google-chrome="flatpak run com.google.Chrome"
 
