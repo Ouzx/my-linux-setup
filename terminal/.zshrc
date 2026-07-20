@@ -86,3 +86,6 @@ rbb() {
     make -j$(nproc) && \
     sudo make install
 }
+
+# fix compinit due to zsh crash
+alias fix-zsh="rm -f ~/.zcompdump* && exec zsh"
