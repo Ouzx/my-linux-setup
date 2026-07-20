@@ -74,3 +74,15 @@ git-clean-branches() {
 
 # Alias for quick access
 alias gcb="git-clean-branches"
+
+# Restart logitech service
+alias rsl="sudo systemctl restart logid"
+
+# Rebuild KWin Better Blur
+rbb() {
+    # Absolute path ensures you can run it from anywhere
+    cd /home/ouzx/kwin-effects-better-blur-dx/build && \
+    cmake .. -DCMAKE_INSTALL_PREFIX=/usr && \
+    make -j$(nproc) && \
+    sudo make install
+}
