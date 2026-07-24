@@ -78,13 +78,25 @@ alias gcb="git-clean-branches"
 # Restart logitech service
 alias rsl="sudo systemctl restart logid"
 
-# Rebuild KWin Better Blur
+# Rebuild KWin Better Blur (with optional repo update)
 rbb() {
-    # Absolute path ensures you can run it from anywhere
-    cd /home/ouzx/kwin-effects-better-blur-dx/build && \
-    cmake .. -DCMAKE_INSTALL_PREFIX=/usr && \
-    make -j$(nproc) && \
-    sudo make install
+    local repo_dir="/home/ouzx/kwin-effects-better-blur-dx"
+
+    # Check for update flags ($1)
+    case "$1" in
+        -u|--update|update|pull)
+            echo "Fetching latest changes from git..."
+            git -C "$repo_dir" pull || return 1
+            ;;
+    esac
+
+    # Build and install using zsh subshell to preserve original PWD
+    (
+     	cd "$repo_dir/build" && \
+        cmake .. -DCMAKE_INSTALL_PREFIX=/usr && \
+        make -j$(nproc) && \
+        sudo make install
+    )
 }
 
 # fix compinit due to zsh crash
