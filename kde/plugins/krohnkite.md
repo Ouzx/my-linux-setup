@@ -8,4 +8,4 @@ Top, Right, Bottom, Left: 20px
 Between tiles: 25px
 
 ## Rules
-Float windows: by title `Picture-in-Picture`, enable "Float utility windows".
+Float windows: by title `Picture-in-Picture`, enable "Float utility windows". by Class `org.kde.plasma.emojier,plasma-emojier,org.kde.kcharselect`

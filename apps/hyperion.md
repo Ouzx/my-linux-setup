@@ -12,3 +12,7 @@ Right: 17
 Input position: 48
 
 Effects: pick one and you're good to go.
+
+---
+
+I created my screen sync app via rust; https://github.com/Ouzx/hyper-sync
