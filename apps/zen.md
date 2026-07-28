@@ -10,4 +10,4 @@ So i created a bookmarklet that opens the page in a new tab with the following c
 - Keyword: `lw`
 - Click `Save`
 
-I personally don't use bookmarks, so with the Keyword set, i can just type `lw` to address bar of the current tab, and it disables the line wrapping immediately.
+I personally don't use bookmarks, so with the Keyword set, i can just type `lw` to address bar of the current tab `(CTRL+L)`, and it disables the line wrapping immediately.
